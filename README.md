@@ -1,4 +1,4 @@
-# contextkit
+# ctxkit
 
 Optimize documentation for LLM context efficiency.
 
@@ -8,7 +8,7 @@ Optimize documentation for LLM context efficiency.
 ## Installation
 
 ```bash
-npm install -g contextkit
+npm install -g ctxkit
 ```
 
 ## Usage
@@ -19,10 +19,10 @@ Create a compact manifest of your documentation for LLM context:
 
 ```bash
 # Create index → creates docs/index.txt
-contextkit index docs/
+ctxkit index docs/
 
 # Custom output location
-contextkit index docs/ -o my-index.txt
+ctxkit index docs/ -o my-index.txt
 ```
 
 Output (single line, ~1KB for hundreds of files):
@@ -38,23 +38,23 @@ Strip markdown formatting to reduce tokens:
 
 ```bash
 # Compress folder → creates docs.compressed/
-contextkit compress docs/
+ctxkit compress docs/
 
 # Custom output location
-contextkit compress docs/ -o .compressed/
+ctxkit compress docs/ -o .compressed/
 
 # Show compression statistics
-contextkit compress docs/ --stats
+ctxkit compress docs/ --stats
 ```
 
 ## Typical Workflow
 
 ```bash
 # 1. Compress your documentation
-contextkit compress docs/
+ctxkit compress docs/
 
 # 2. Index the compressed files
-contextkit index docs.compressed/
+ctxkit index docs.compressed/
 
 # 3. Result:
 #    docs.compressed/

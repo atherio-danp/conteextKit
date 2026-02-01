@@ -1,11 +1,11 @@
 {
-  "name": "contextkit",
+  "name": "ctxkit",
   "version": "1.0.0",
   "description": "Optimize documentation for LLM context - generate compact indexes and compress markdown",
   "type": "module",
   "main": "dist/cli.js",
   "bin": {
-    "contextkit": "dist/cli.js"
+    "ctxkit": "dist/cli.js"
   },
   "files": [
     "dist"

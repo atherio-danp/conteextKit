@@ -17,24 +17,24 @@ interface IndexOptions {
 
 function printHelp(): void {
   console.log(`
-contextkit - Pre-compress markdown documentation for LLM token efficiency
+ctxkit - Pre-compress markdown documentation for LLM token efficiency
 
 Usage:
-  contextkit compress <folder>       Compress all markdown files in folder
-  contextkit index <folder>          Generate index of folder contents
+  ctxkit compress <folder>       Compress all markdown files in folder
+  ctxkit index <folder>          Generate index of folder contents
 
 Compress:
-  contextkit compress docs/                  → creates docs.compressed/
-  contextkit compress docs/ -o .compressed/  → creates .compressed/
-  contextkit compress docs/ --stats          → show compression statistics
+  ctxkit compress docs/                  → creates docs.compressed/
+  ctxkit compress docs/ -o .compressed/  → creates .compressed/
+  ctxkit compress docs/ --stats          → show compression statistics
 
 Index:
-  contextkit index docs/                     → creates docs/index.txt
-  contextkit index docs/ -o my-index.txt     → creates my-index.txt
+  ctxkit index docs/                     → creates docs/index.txt
+  ctxkit index docs/ -o my-index.txt     → creates my-index.txt
 
 Typical Workflow:
-  contextkit compress docs/                  # Step 1: compress
-  contextkit index docs.compressed/          # Step 2: index compressed files
+  ctxkit compress docs/                  # Step 1: compress
+  ctxkit index docs.compressed/          # Step 2: index compressed files
 
 Options:
   -o, --output <path>    Custom output location
@@ -106,7 +106,7 @@ function processCompress(input: string, options: CompressOptions): void {
 
   if (!isDirectory(inputPath)) {
     console.error('Error: compress requires a folder, not a file');
-    console.error('Usage: contextkit compress <folder>');
+    console.error('Usage: ctxkit compress <folder>');
     process.exit(1);
   }
 
@@ -153,7 +153,7 @@ function processIndex(input: string, options: IndexOptions): void {
 
   if (!isDirectory(inputPath)) {
     console.error('Error: index requires a folder, not a file');
-    console.error('Usage: contextkit index <folder>');
+    console.error('Usage: ctxkit index <folder>');
     process.exit(1);
   }
 
@@ -187,7 +187,7 @@ function main(): void {
 
   if (!input) {
     console.error(`Error: No folder specified`);
-    console.error(`Usage: contextkit ${command} <folder>`);
+    console.error(`Usage: ctxkit ${command} <folder>`);
     process.exit(1);
   }
 
